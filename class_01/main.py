@@ -79,7 +79,7 @@ print(2 , "x" , 5 ,"=", 2*5)
 # name = "Aliyan Amir"
 # print(name)
 
-# number = 3+7-1
+# number = 3+7-2
 # print(number)
 
 
