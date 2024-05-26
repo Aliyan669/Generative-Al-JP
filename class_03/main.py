@@ -128,14 +128,122 @@ Extensions:
 
 
 # Task
-a = True
-b = True
-c = False
-d = False
+# a = True
+# b = True
+# c = False
+# d = False
 
-print(a and b) # true
+# print(a and b) # true
 # print(a or b) # true
 # print(a or c) # true
 # print(a and d) # false
 # print((a and b )or c) # true
-# print((a or b) and c) # false
+# print((a or b) and c) # false   
+
+
+# if Statement Syntax 
+
+# if condition: # which should evaluate to True/False. Only work with comparison operators
+#     print("true") # if body
+    
+# a = 10
+# b = 10
+# if a == b:
+#     print("Successfull")
+
+# a = 10
+# b = 20
+# if a > b:
+#     print("b is greater than a")
+# else:
+#     print("a is less than b")
+    
+
+# Write a program to check the number is positive.
+
+# a = 50000
+
+# a = int(input("Please Enter a number "))
+# if a > 0:
+#     print("Number is Positive ")
+# else:
+#      print("Number is Negative ") 
+    
+    
+# Write a program to check whether a person is eligible to vote or not?
+
+# age = 18
+
+# age = int(input("Please Enter your age "))
+# if age >= 18:
+#    print("You are eligible to vote")
+# else:
+#    print("You are not eligible to vote") 
+
+
+# Write a program to check whether a number is odd or even? Use Modulus Operator
+
+# a = 8
+
+# a = int(input("Please Enter a Number "))
+# if a % 2 == 0:
+#     print("Even Number")
+# else:
+#     print("Odd Number")
+
+
+# elif Example
+
+# marks = 90
+# if marks >= 80:
+#     print("A+")
+# elif marks >= 70:
+#     print("A")
+# elif marks >= 60:
+#     print("B")
+# elif marks >= 50:
+#     print("C")
+# else:
+#     print("no grading")
+
+
+# Write a program to check char is vowel or not. - elif
+
+# vowel chars are
+# 1. a
+# 2. e
+# 3. i
+# 4. o
+# 5. u
+
+# char = input("Enter a Vowel Number ")
+
+# if char == "a":
+#     print("Vowel")
+# elif char == "e":
+#     print("Vowel")
+# elif char == "i":
+#     print("Vowel")
+# elif char == "o":
+#     print("Vowel")
+# elif char == "u":
+#     print("Vowel")
+# else:
+#     print("Not Vowel")
+
+
+# Second Method
+
+# char = input("Enter a Vowel Number ")
+
+# if char == "a" or char == "e" or char == "i" or char == "o" or char == "u":
+#     print("Vowel")
+# else:
+#     print("Not Vowel")
+    
+    
+
+
+
+
+
