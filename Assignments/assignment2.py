@@ -79,3 +79,21 @@
 #     print("C")
 # else:
 #     print("no grading")
+
+
+# Write a program to check whether a number is divisible by 7
+
+# num = int(input("Please Enter Your Number "))
+# if num % 7 == 0:
+#     print (num, "is divisible by 7 " )
+# else:
+#     print (num, "is not divisible by 7 " )
+
+
+# Write a program to check if year is leap year.
+
+# year = int(input("Please Enter Yaear "))
+# if year % 4 == 0:
+#     print ("Leap Year" )
+# else:
+#     print ("Not Leap Year" )
