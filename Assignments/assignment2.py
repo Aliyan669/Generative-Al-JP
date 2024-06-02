@@ -9,6 +9,7 @@
 #    print("You are not eligible to vote") 
 
 
+
 # Write a program to check char is vowel or not. - elif
 
 # vowel chars are
@@ -44,6 +45,7 @@
 #     print("Not Vowel")
 
 
+
 # Write a program to check the number is positive or negative. User input.
 
 # a = int(input("Please Enter a number "))
@@ -51,6 +53,7 @@
 #     print("Number is Positive ")
 # else:
 #      print("Number is Negative ") 
+
 
 
 # Write a program to check whether a number is odd or even? Use Modulus Operator
@@ -62,6 +65,7 @@
 #     print("Even Number")
 # else:
 #     print("Odd Number")
+
 
 
 # Write a program to display the grade of the user in subject A, ask user marks obtained out of 100
@@ -81,6 +85,7 @@
 #     print("no grading")
 
 
+
 # Write a program to check whether a number is divisible by 7
 
 # num = int(input("Please Enter Your Number "))
@@ -90,10 +95,46 @@
 #     print (num, "is not divisible by 7 " )
 
 
+
 # Write a program to check if year is leap year.
 
-# year = int(input("Please Enter Yaear "))
+# year = int(input("Please Enter Year "))
 # if year % 4 == 0:
 #     print ("Leap Year" )
 # else:
 #     print ("Not Leap Year" )
+
+
+# Write a program to ask user its name and check whether name consists of 5 or more letters
+
+# name = input("Please Enter Your Name ")
+
+# if len(name) >= 5:
+#     print ("Your Name consists of 5 or more letters" )
+# else:
+#     print ("Name Not Consists of 5 Letter" )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Write a program that accepts 1 input from user and check if the number is divisible by 2 and 3 both.
+
+# num = int(input("Please Enter Your Number "))
+
+# if num % 2 == 0:
+#     print (num, "is divisible by 2 " )
+    
+# elif num % 3 == 0:
+#     print (num, "is divisible by 3 " )
+# else:
+#     print (num, "is not divisible by 2 and 3 " )
