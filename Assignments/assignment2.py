@@ -116,25 +116,40 @@
 
 
 
+# Write a program that accepts 3 inputs from user. input 1 and input 2 should be numbers and the third input should be mathematical operator. 
 
+# firstNumber = int(input("Enter you First Value "));
+# secondNumber = int(input("Enter you Second Value "));
+# operator = input("Enter you Opreate ex. Addition, Subtraction, Multiplication, Division ");
 
+# if operator == "addition" or operator == "+" :
+#     print(firstNumber + secondNumber);
 
+# elif operator == "subtraction" or operator == "subtract" or operator == "-": 
+#     print(firstNumber - secondNumber);
 
+# elif operator == "multiplication" or operator == "multipliy" or operator == "x":
+#     print(firstNumber * secondNumber)
 
+# elif operator == "division" or operator == "divide" or operator == "÷": 
+#     print(firstNumber / secondNumber);
 
-
-
-
+# else:
+#     print("Please select a valid operators")
 
 
 # Write a program that accepts 1 input from user and check if the number is divisible by 2 and 3 both.
 
 # num = int(input("Please Enter Your Number "))
 
-# if num % 2 == 0:
+# if num % 2 == 0 and num % 3 == 0:
+#     print (num, "is divisible by 2 & 3 " )
+    
+# elif num % 2 == 0:
 #     print (num, "is divisible by 2 " )
     
 # elif num % 3 == 0:
 #     print (num, "is divisible by 3 " )
+    
 # else:
 #     print (num, "is not divisible by 2 and 3 " )
