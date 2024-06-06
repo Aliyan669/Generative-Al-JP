@@ -153,3 +153,156 @@
     
 # else:
 #     print (num, "is not divisible by 2 and 3 " )
+
+
+
+# Write a program that accepts 2 inputs from user and check which number is largest.
+
+# num1 = int(input("Please Enter Your Number "))
+# num2 = int(input("Please Enter Your Number "))
+
+# if num1 > num2:
+#     print (num1, "is larger than " , num2 )
+
+# elif num2 > num1:
+#     print (num2, "is larger than " , num1 )
+    
+# else:
+#     print (num1,"Both numbers are equal" , num2 )
+
+
+
+# Write a program that accepts 3 input from user and check which number is largest.
+
+# num1 = int(input("Enter the first number: "))
+# num2 = int(input("Enter the second number: "))
+# num3 = int(input("Enter the third number: "))
+
+# if num1 >= num2 and num1 >= num3:
+#     print("The largest number ",num1)
+    
+# elif num2 >= num1 and num2 >= num3:
+#      print("The largest number ",num2)
+     
+# else:
+#      print("The largest number ",num3)
+
+
+
+# Write a program that accepts 3 input from user and check the second largest.
+
+# num1 = int(input("Enter the first number: "))
+# num2 = int(input("Enter the second number: "))
+# num3 = int(input("Enter the third number: "))
+
+# if (num1 >= num2 and num1 <= num3) or (num1 <= num2 and num1 >= num3):
+#     print("The Second largest number is ",num1)
+    
+# elif (num2 >= num1 and num2 <= num3) or (num2 <= num1 and num2 >= num3):
+#      print("The Second largest number is ",num2)
+     
+# else:
+#      print("The Second largest number is ",num3)
+    
+
+    
+# Write a python program that accept user an input. The valid input should be of following
+
+# user = input("Please Enter Your Color ").lower()
+# print(user)
+
+# if user == "green":
+#     print("Car is allowed to go")
+    
+# elif user == "yellow":
+#     print("Car has to Wait")
+    
+# elif user == "red":
+#     print("Car has to Stop")
+     
+# else:
+#      print("Invalid Input")
+
+
+
+# Write a program that takes two numbers as input and prints:
+
+# firstNumber = int(input("Please Enter Your First Number "))
+# secondNumber = int(input("Please Enter Your Second Number "))
+
+# if firstNumber > secondNumber:
+#     print ( "First Number is Greater than Second Number"  )
+
+# elif secondNumber > firstNumber:
+#      print ( "Second Number is Greater than First Number"  )
+    
+# else:
+#     print ("Both numbers are equal" )
+
+
+
+# Write a program that takes a password as input and checks its strength:
+
+# password = input("Please Enter Your Password  ")
+
+# if len(password) < 6:
+#     print ("Weak password" )
+    
+# elif len(password) >= 7 or len(password) <= 12 :
+#     print ("Moderate password" )
+    
+# else:
+#     print ("Strong password" )
+
+    
+# Write a program that takes an employee's salary and years of service as input. Calculate the bonus as follows:
+
+# years= int(input("Enter year"))
+# amount = 120000
+
+# if years < 5: 
+#     print("No Bonus")
+    
+# elif years >= 5 and  years < 10: 
+#     print("Your Salary is",amount , "Your Bonus is 10% :", 0.10*amount, "Total Amount is", amount+ (0.10*amount))
+
+# elif years >= 10 : 
+#     print("Your Salary is",amount , "Your Bonus is 20% :", 0.20*amount ,"Total Amount is", amount+ (0.20*amount))
+
+
+
+# Write a program that takes the total amount of a purchase as input and applies a discount:
+
+# item = int(input("Enter purchase items amount"))
+
+# if item < 100: 
+#     print("No Discount ")
+    
+# elif item >= 100 and  item < 500: 
+#     print("Your Items Price is",item , "Your Discount is 10% : " ,0.10*item ," Total Amount is", item- (0.10*item))
+
+# elif item >= 500 : 
+#     print("Your Items Price is",item , "Your Discount is 20%:  ",0.20*item, " Total Amount is", item- (0.20*item))
+
+
+
+# Write a program that takes a person's age as input and prints the age group they belong to:
+
+
+# age = int(input("Enter Your Age : "))
+
+# if age < 13: 
+#     print("Child")
+    
+# elif age >= 13 and  age <= 19: 
+#     print("Teenager")
+
+# elif age >= 20 : 
+#    if age < 65: 
+#     print("Adult")
+#    elif age >= 65: 
+#     print("Senior")
+
+
+
+# Write a program that checks if a customer is eligible for a discount based on their membership status and purchase amount:
