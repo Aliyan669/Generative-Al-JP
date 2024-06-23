@@ -148,3 +148,49 @@ emails = ["user_1@gmail.com", "user_2@gmail.com", "user_3", "user_4@gmail.com", 
 # print(data["Siblings"][1])
 # print(data["employe_detail"]["salary"])
 # print(data["employe_detail"]["manager_of"][1])
+
+
+
+employees = [
+    {
+        "name": "Alice",
+        "projects": ["ProjectA", "ProjectB", "ProjectC"],
+        "salaries": [70000, 72000, 75000],
+        "Department": "HR"
+    },
+    {
+        "name": "Bob",
+        "projects": ["ProjectD", "ProjectE", "ProjectF"],
+        "salaries": [65000, 67000, 70000],
+        "Department": "Finance"
+    },
+    {
+        "name": "Charlie",
+        "projects": ["ProjectG", "ProjectH", "ProjectI"],
+        "salaries": [80000, 82000, 85000],
+        "Department": "IT"
+    },
+    {
+        "name": "Diana",
+        "projects": ["ProjectJ", "ProjectK", "ProjectL"],
+        "salaries": [75000, 77000, 80000],
+        "Department": "Marketing"
+    },
+    {
+        "name": "John",
+        "projects": ["ProjectM", "ProjectN", "ProjectO"],
+        "salaries": [55000, 57000, 60000],
+        "Department": "Sales"
+    }
+]
+
+# print(employees[0]["Department"])
+# print(employees[1]["Department"])
+# print(employees[2]["Department"])
+# print(employees[3]["Department"])
+# print(employees[4]["Department"])
+
+
+# for item in employees:
+#     print(item["Department"])
+    
