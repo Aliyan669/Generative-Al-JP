@@ -102,3 +102,51 @@
 #     for item_2 in list_2:
 #         if item_1 == item_2:
 #             print("Common Number", item_1)
+
+
+# order_1_destination = "China"
+
+# if order_1_destination == "New York":
+#     shipment_price = 10
+# elif order_1_destination == "California":
+#     shipment_price = 20
+# elif order_1_destination == "China":
+#     shipment_price = 30
+# print(shipment_price)
+
+
+# order_1_destination = "New York"
+
+# if order_1_destination == "New York":
+#     shipment_price = 10
+# elif order_1_destination == "California":
+#     shipment_price = 20
+# elif order_1_destination == "China":
+#     shipment_price = 30
+# print(shipment_price)
+
+
+# order_1_destination = "China"
+
+# if order_1_destination == "New York":
+#     shipment_price = 10
+# elif order_1_destination == "California":
+#     shipment_price = 20
+# elif order_1_destination == "China":
+#     shipment_price = 30
+# print(shipment_price)
+
+
+order_1_destination = "China"
+locations = ["New York", "California", "China"]
+
+shipment_price = 0
+for loc in locations:
+    if loc == order_1_destination:
+        shipment_price = 10
+    elif loc == order_1_destination:
+        shipment_price = 20
+    elif loc == order_1_destination:
+        shipment_price = 30
+   
+print(shipment_price)
