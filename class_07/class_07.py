@@ -16,7 +16,7 @@
 #     print(key, "=>", val)
 
 
-#Update the dictionary value
+# Update the dictionary value
 
 # dictt['Books'] = ["1", "2", "3", "4"]
 # dictt.update({"Books": ["1", "2", "3", "4"]})
@@ -33,8 +33,8 @@
 
 # for key,val in enumerate(arr):
 #     print(key , val)
-    
-    
+
+
 # for i, (key, value) in enumerate(dictt.items()):
 #     print(i, key)
 
@@ -70,8 +70,8 @@
 #     print(x, "hello world")
 
 
-# ask user input postive number and keep asking positive number and display   
-# terminate the program when user input negative number 
+# ask user input postive number and keep asking positive number and display
+# terminate the program when user input negative number
 
 # user_number = int(input("enter positive number "))
 # while user_number > 0:
@@ -86,7 +86,7 @@
 #      print(user)
 
 
-#Find the Common Number
+# Find the Common Number
 
 # list_1 = [10,20,30]
 # list_2 = [40,20,50,60]
@@ -137,16 +137,112 @@
 # print(shipment_price)
 
 
-order_1_destination = "China"
-locations = ["New York", "California", "China"]
+# order_1_destination = "China"
+# locations = ["New York", "California", "China"]
 
-shipment_price = 0
-for loc in locations:
-    if loc == order_1_destination:
-        shipment_price = 10
-    elif loc == order_1_destination:
-        shipment_price = 20
-    elif loc == order_1_destination:
-        shipment_price = 30
+# shipment_price = 0
+# for loc in locations:
+#     if loc == order_1_destination:
+#         shipment_price = 10
+#     elif loc == order_1_destination:
+#         shipment_price = 20
+#     elif loc == order_1_destination:
+#         shipment_price = 30
+
+# print(shipment_price)
+
+
+# order_1_destination = "China"
+# locations = ["New York", "California", "China"]
+# shipment_price = 0
+
+# def get_shipping_price():
+#     for loc in locations:
+#         if loc == order_1_destination:
+#             shipment_price = 10
+#         elif loc == order_1_destination:
+#             shipment_price = 20
+#         elif loc == order_1_destination:
+#             shipment_price = 30
+            
+# print(shipment_price)
+# get_shipping_price()
+
+
+# local vs global
+
+
+# def multiply():
+#     global x
+    # print("hello world")
+    # print(x * y)
    
-print(shipment_price)
+#     x = 100
+#     print(x)
+
+
+# x = 2
+# y = 5
+
+# print( x * y)
+# print(x)
+
+# multiply()
+
+# print(x)
+
+
+# x  = 100
+# y = 100
+
+
+# x = "hello"
+
+# def modify_string(xx): # calle
+#     print(xx)
+#     xx = xx + " world"
+#     print(xx)
+#     return xx
+
+# x = modify_string(x) # caller
+# print(x)
+
+
+# Impure function vs Pure function
+
+# def get_shippment_price(order_1_destination):
+#     if order_1_destination == "New York":
+#         shipment_price = 10
+#     elif order_1_destination == "California":
+#         shipment_price = 20
+#     elif order_1_destination == "China":
+#         shipment_price = 30
+#     print(shipment_price)
+#     return shipment_price
+
+
+# def calculate_overall_order_tax(total_price, shipment_rate):
+    
+#     print(total_price*shipment_rate)
+    
+# shipment_price = get_shippment_price("China")
+
+# calculate_overall_order_tax(100, shipment_price)
+
+
+# x = 5
+# y = 3
+
+# def calculate(a,b):
+#     print(a+b)
+#     print(a-b)
+#     print(a*b)
+    
+# calculate(x,y)
+    
+    
+# def do_sum(*abc): #Multiple Arguement Get (*)
+#    print(abc)
+    
+
+# do_sum(1, 2, 3, 4, 5,6 ,7 ,8)   
