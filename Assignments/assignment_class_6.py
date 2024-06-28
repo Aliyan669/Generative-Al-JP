@@ -82,7 +82,7 @@ library_books = {
 
 # 2. Write a for loop to calculate the total number of books in the library. Print the total count.
 
-# count = 0 
+# count = 0
 # for item in library_books:
 #      count  += library_books[item]
 # print("Total Books",count)
@@ -109,36 +109,35 @@ library_books = {
 # print(book_list)
 
 
-
 # Given the dict
 
-students = {
-    "Alice": {
-                "Subjects": ["Math", "Science", "English"],
-                "Scores": [85, 90, 78],
-                "Class": 10
-            },
-    "Bob": {
-        "Subjects": ["Math", "Science", "English"],
-        "Scores": [75, 80, 88],
-        "Class": 10
-    },
-    "Charlie": {
-        "Subjects": ["Math", "Science", "English"],
-        "Scores": [92, 89, 94],
-        "Class": 11
-    },
-    "Diana": {
-        "Subjects": ["Math", "Science", "English"],
-        "Scores": [88, 76, 85],
-        "Class": 11
-    },
-    "John": {
-        "Subjects": ["Math", "Science", "English"],
-        "Scores": [50, 60, 60],
-        "Class": 11
-    }
-}
+# students = {
+#     "Alice": {
+#                 "Subjects": ["Math", "Science", "English"],
+#                 "Scores": [85, 90, 78],
+#                 "Class": 10
+#             },
+#     "Bob": {
+#         "Subjects": ["Math", "Science", "English"],
+#         "Scores": [75, 80, 88],
+#         "Class": 10
+#     },
+#     "Charlie": {
+#         "Subjects": ["Math", "Science", "English"],
+#         "Scores": [92, 89, 94],
+#         "Class": 11
+#     },
+#     "Diana": {
+#         "Subjects": ["Math", "Science", "English"],
+#         "Scores": [88, 76, 85],
+#         "Class": 11
+#     },
+#     "John": {
+#         "Subjects": ["Math", "Science", "English"],
+#         "Scores": [50, 60, 60],
+#         "Class": 11
+#     }
+# }
 
 
 # 1. display Alice English Score
@@ -150,4 +149,99 @@ students = {
 # 7. add new subject and its score in John
 
 # print("Alice English Score",students["Alice"]["Scores"][2])  # 1
+
 # print("Bob Class is",students["Bob"]["Class"])  # 2
+
+# print("Charlie Math Score",students["Charlie"]["Scores"][0])  # 3
+
+# print(students["Diana"]["Scores"]) / len(students["Diana"]["Scores"]) # 4
+
+# data = zip(students["John"]["Subjects"], students["John"]["Scores"])  # 5
+# for subject, score in data:
+#     print("Subject:",subject, "Score:", score)
+
+# new_student = {     # 6
+#     "Eva": {
+#         "Subjects": ["Math", "Science", "English"],
+#         "Scores": [95, 88, 90],
+#         "Class": 10
+#     }
+# }
+# students.update(new_student)
+# print(students)
+
+# new_subject = "Urdu"    # 7
+# new_score = 70
+# students["John"]["Subjects"].append(new_subject)
+# students["John"]["Scores"].append(new_score)
+# print(students["John"])
+
+
+# Givent the list of students
+# students = [
+#     {
+#         "name": "Alice",
+#         "subjects": ["Math", "Science", "English"],
+#         "scores": [85, 90, 78],
+#         "Class": 10
+#     },
+#     {
+#         "name": "Bob",
+#         "subjects": ["Math", "Science", "English"],
+#         "scores": [75, 80, 88],
+#         "Class": 10
+#     },
+#     {
+#         "name": "Charlie",
+#         "subjects": ["Math", "Science", "English"],
+#         "scores": [92, 89, 94],
+#         "Class": 11
+#     },
+#     {
+#         "name": "Diana",
+#         "subjects": ["Math", "Science", "English"],
+#         "scores": [88, 76, 85],
+#         "Class": 11
+#     },
+#     {
+#         "name": "John",
+#         "subjects": ["Math", "Science", "English"],
+#         "scores": [80, 56, 45],
+#         "Class": 13
+#     }
+# ]
+
+# 1. display Alice English Score
+# 2. display Bob Class
+# 3. display Charlie Math Score
+# 4. display Diana's avg score
+# 5. display John's all subject name and score with format: Student: [Name], Score: [Subject], Score: [Score].
+# 6. display which class obtained the higher marks
+# 7. display the student name that obtain high marks in subject Math in class 10
+# 8. Add new Student and its subject, score and class in same dict i.e students
+
+# for item in students:        # 1
+#     if item["name"] == "Alice":
+#       english_score = item["scores"][item["subjects"].index("English")]
+# print("Alice English Score",english_score)
+
+# for item in students:        # 2
+#     if item["name"] == "Bob":
+#         print("Bob Class is",item["Class"])
+
+# for item in students:       # 3
+#     if item["name"] == "Charlie":
+#       math_score = item["scores"][item["subjects"].index("Math")]
+# print("Charlie Math Score",math_score)
+
+# for item in students:       # 4
+#     if item["name"] == "Diana":
+#       avg_score = sum(item["scores"]) / len(item["scores"])
+# print("Diana Average Score",avg_score)
+
+
+# for item in students:        # 5
+#     if item["name"] == "John":
+#         print("Student:", item['name'])
+#         for subject, score in zip(item["subjects"], item["scores"]):
+#             print("Subject:", subject, "Score:" ,score)
