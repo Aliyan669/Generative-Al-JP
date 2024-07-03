@@ -187,8 +187,7 @@
 # and "fuel_per_liter" as optional arg that has default value to 280.
 # The function should return the cost in Rs.
 
-
-# def Price(distance, fuel=280):    
+# def Price(distance, fuel=280):
 #     cal = distance*fuel
 #     return cal
 
@@ -196,3 +195,153 @@
 # fuel = 290
 # result = Price(dist, fuel)
 # print("Total Distance is:", dist, "Fuel Price per Liter",fuel, "Total Cost is:", result)
+
+
+# Write a function called is_valid_email  that takes an email address as an argument and returns True/False depending on whether it is a valid email address.
+# Check rules:
+# Must contain at least 1 character before the at symbol
+# Must contain an @ symbol
+# Must have at-least 1 character after the @ symbol and before the period(.)
+# Must contain at least 1 character after the last period(.).
+# Maximum 256 characters
+# Must start with a letter or a number
+
+# def is_valid_email(email):
+#     if len(email) > 256:
+#         return False
+
+#     if "@" not in email:
+#         return False
+
+#     local_part, domain_part = email.split('@', 1)
+
+#     if not local_part or not domain_part:
+#         return False
+
+#     if not local_part[0].isalnum():
+#         return False
+
+#     domain_sections = domain_part.split('.')
+
+#     if len(domain_sections) < 2 or not all(domain_sections):
+#         return False
+
+#     return True
+
+# # Example usage
+# emails = [
+#     "example@example.com",
+#     "user.name@domain.co",
+#     "username@domain.com.",
+#     "@example.com",
+#     "user@.com",
+#     "user@domain.c",
+#     "user@domain..com",
+#     "user@domain.comextracharactersbecauseitisalongemailaddressandisnotvalid",
+#     "user@domain.c0m",
+#     "userdomain.com",
+#     "user@domaincom"
+# ]
+
+# email_results = {email: is_valid_email(email) for email in emails}
+# print(email_results)
+
+
+# Take a variable store i.e
+# Store = {“name”: “my store”, “inventory”: [], “orders”: []}
+
+# Add 5 items in the inventory using a function “add_item”
+# id, name, price and quantity
+
+# Store = {
+#     "name": "my store",
+#     "inventory": [],
+#     "orders": []
+# }
+
+# def add_item(store, item_id, name, price, quantity):
+#     list = {
+#         "id": item_id,
+#         "name": name,
+#         "price": price,
+#         "quantity": quantity
+#     }
+#     store["inventory"].append(list)
+
+# add_item(Store, 1, "Apple", 0.5, 100)
+# add_item(Store, 2, "Banana", 0.3, 150)
+# add_item(Store, 3, "Orange", 0.7, 120)
+# add_item(Store, 4, "Mango", 1.2, 80)
+# add_item(Store, 5, "Grapes", 2.0, 200)
+
+# print(Store)
+
+
+# Take user input unless it says “done”
+# Display user updated inventory items every time
+# Ask user to type id of the item to purchase or type “done” to checkout
+# Each time only 1 quantity will by subtracted from the item
+# Functions: add_item_in_inventory, add_item_in_basket(), checkout()
+# On checkout, print “{quantity} {item} sold in {store}”
+
+# Define the Store dictionary
+# Store = {
+#     "name": "my store",
+#     "inventory": [],
+#     "orders": []
+# }
+
+# # Define the add_item function
+# def add_item(store, item_id, name, price, quantity):
+#     item = {
+#         "id": item_id,
+#         "name": name,
+#         "price": price,
+#         "quantity": quantity
+#     }
+#     store["inventory"].append(item)
+
+# # Function to display the current inventory
+# def display_inventory(store):
+#     print("Current Inventory:")
+#     for item in store["inventory"]:
+#         print(f"ID: {item['id']}, Name: {item['name']}, Price: {item['price']}, Quantity: {item['quantity']}")
+
+# # Function to purchase an item
+# def purchase_item(store, item_id):
+#     for item in store["inventory"]:
+#         if item["id"] == item_id:
+#             if item["quantity"] > 0:
+#                 item["quantity"] -= 1
+#                 store["orders"].append(item)
+#                 print(f"Purchased 1 {item['name']}.")
+#             else:
+#                 print(f"{item['name']} is out of stock.")
+#             break
+#     else:
+#         print("Invalid item ID.")
+
+# # Adding items to the inventory
+# print("Add items to the inventory. Type 'done' to finish.")
+# while True:
+#     item_id = input("Enter item ID: ")
+#     if item_id.lower() == "done":
+#         break
+#     name = input("Enter item name: ")
+#     price = float(input("Enter item price: "))
+#     quantity = int(input("Enter item quantity: "))
+#     add_item(Store, int(item_id), name, price, quantity)
+
+# # Display the inventory
+# display_inventory(Store)
+
+# # Purchase items
+# print("Type the item ID to purchase an item, or 'done' to checkout.")
+# while True:
+#     user_input = input("Enter item ID to purchase or 'done' to checkout: ")
+#     if user_input.lower() == "done":
+#         break
+#     purchase_item(Store, int(user_input))
+#     display_inventory(Store)
+
+# print("Checkout complete. Thank you for your purchase!")
