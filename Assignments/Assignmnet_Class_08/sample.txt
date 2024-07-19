@@ -1,0 +1,19 @@
+Hi John Doe!
+
+We've found the best article for you based on your interest: How to Use PET Bottles Effectively
+Please click <a href='http://example.com/article1'>here</a> to open the article
+
+Hi Jane Smith!
+
+We've found the best article for you based on your interest: 10 Creative Uses for PET Bottles
+Please click <a href='http://example.com/article2'>here</a> to open the article
+
+Hi Alice Johnson!
+
+We've found the best article for you based on your interest: The Environmental Impact of PET Bottles
+Please click <a href='http://example.com/article3'>here</a> to open the article
+
+Hi Alice Johnson!
+
+We've found the best article for you based on your interest: The Environmental Impact of PET Bottles
+Please click <a href='http://example.com/article3'>here</a> to open the article
