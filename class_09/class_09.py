@@ -6,8 +6,8 @@ from datetime import date, datetime
 # dt_parts = dt.split("-")
 # dt_parts[1] = "08"
 
-# dta = "-".join(dt_parts) 
-# print(dta) 
+# dta = "-".join(dt_parts)
+# print(dta)
 
 
 # current date
@@ -39,7 +39,7 @@ from datetime import date, datetime
 # dt = date.fromisoformat(dt) # it will raise error because date format is not ISO
 # print(dt, type(dt))
 
-# dt = "03-07-aliyan-2024" 
+# dt = "03-07-aliyan-2024"
 # dt = datetime.strptime(dt, "%d-%m-aliyan-%Y")  #Isko hum batadenge ke humne kis format me date likhi hai hai wo phir iso format me change kardega
 # print(dt, type(dt))
 # print(dt.date())
@@ -63,7 +63,7 @@ from datetime import date, datetime
 # convert date object to string
 
 # dt = datetime.now()
-# pak_dt = dt.strftime("%m-%d-%Y")  #ye string type return karta hai orr jo format ap denge us format me kardeta hai 
+# pak_dt = dt.strftime("%m-%d-%Y")  #ye string type return karta hai orr jo format ap denge us format me kardeta hai
 # print(pak_dt, type(pak_dt))
 
 # dt_str = "2024-07-06 10:10:00"
