@@ -251,36 +251,36 @@ create the same program again but this time file data should be stored in json
 #         json.dump(passwords, f, indent=4)
 
 # def add_password(passwords):
-#     service = input("Enter the service name: ")
+#     website = input("Enter the website name: ")
 #     username = input("Enter the username: ")
 #     password = getpass.getpass("Enter the password: ")
 
-#     passwords[service] = {"username": username, "password": password}
+#     passwords[website] = {"username": username, "password": password}
 #     save_passwords(passwords)
 #     print("Password added successfully.")
 
 # def retrieve_password(passwords):
-#     service = input("Enter the service name: ")
+#     website = input("Enter the website name: ")
 
-#     if service in passwords:
-#         print(f"Service: {service}\nUsername: {passwords[service]['username']}\nPassword: {passwords[service]['password']}")
+#     if website in passwords:
+#         print(f"website: {website}\nUsername: {passwords[website]['username']}\nPassword: {passwords[website]['password']}")
 #     else:
-#         print("No password found for this service.")
+#         print("No password found for this website.")
 
 # def list_passwords(passwords):
-#     for service, details in passwords.items():
-#         print(f"Service: {service}\nUsername: {details['username']}\nPassword: {details['password']}")
+#     for website, details in passwords.items():
+#         print(f"website: {website}\nUsername: {details['username']}\nPassword: {details['password']}")
 #         print("-" * 30)
 
 # def delete_password(passwords):
-#     service = input("Enter the service name: ")
+#     website = input("Enter the website name: ")
 
-#     if service in passwords:
-#         del passwords[service]
+#     if website in passwords:
+#         del passwords[website]
 #         save_passwords(passwords)
 #         print("Password deleted successfully.")
 #     else:
-#         print("No password found for this service.")
+#         print("No password found for this website.")
 
 # def main():
 #     passwords = load_passwords()
@@ -308,6 +308,98 @@ create the same program again but this time file data should be stored in json
 #             break
 #         else:
 #             print("Invalid choice. Please try again.")
+
+# if __name__ == "__main__":
+#     main()
+
+
+"""
+create the same program again but this time file data should be stored in binary using pickle module
+"""
+
+
+# import pickle
+# import getpass
+# file_path = "passwords.pkl"
+
+
+# def load_passwords():
+#     try:
+#         f = open(file_path, "rb")
+#         return pickle.load(f)
+#     except (FileNotFoundError, EOFError):
+#         return {}
+
+
+# def save_passwords(passwords):
+#     f = open(file_path, "wb")
+#     pickle.dump(passwords, f)
+
+
+# def add_password(passwords):
+#     website = input("Enter the website name: ")
+#     username = input("Enter the username: ")
+#     password = getpass.getpass("Enter the password: ")
+#     passwords[website] = {"username": username, "password": password}
+#     save_passwords(passwords)
+#     print("Password added successfully.")
+
+
+# def retrieve_password(passwords):
+#     website = input("Enter the website name: ")
+
+#     if website in passwords:
+#         print(f"website: {website}\nUsername: {
+#               passwords[website]['username']}\nPassword: {passwords[website]['password']}")
+#     else:
+#         print("No password found for this website.")
+
+
+# def list_passwords(passwords):
+#     for website, details in passwords.items():
+#         print(f"website: {website}\nUsername: {
+#               details['username']}\nPassword: {details['password']}")
+#         print("-" * 30)
+
+
+# def delete_password(passwords):
+#     website = input("Enter the website name: ")
+
+#     if website in passwords:
+#         del passwords[website]
+#         save_passwords(passwords)
+#         print("Password deleted successfully.")
+#     else:
+#         print("No password found for this website.")
+
+
+# def main():
+#     passwords = load_passwords()
+
+#     while True:
+#         print("\nPassword Manager")
+#         print("1. Add Password")
+#         print("2. Retrieve Password")
+#         print("3. List All Passwords")
+#         print("4. Delete Password")
+#         print("5. Exit")
+
+#         choice = input("Enter your choice: ")
+
+#         if choice == '1':
+#             add_password(passwords)
+#         elif choice == '2':
+#             retrieve_password(passwords)
+#         elif choice == '3':
+#             list_passwords(passwords)
+#         elif choice == '4':
+#             delete_password(passwords)
+#         elif choice == '5':
+#             print("Exiting Password Manager.")
+#             break
+#         else:
+#             print("Invalid choice. Please try again.")
+
 
 # if __name__ == "__main__":
 #     main()
