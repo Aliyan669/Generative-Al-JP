@@ -1,4 +1,5 @@
 from datetime import date, datetime, timedelta
+import pytz
 
 # Write a Python program that uses the date module to print the current date in the format "YYYY-MM-DD".
 
@@ -169,3 +170,247 @@ from datetime import date, datetime, timedelta
 # datetime_obj = datetime.strptime(datetime_str, "%m-%d-%Y %I:%M:%S %p")
 
 # print("Datetime object:", datetime_obj)
+
+
+# create a current datetime and then displays it in the format "HH:MM AM/PM"
+
+# current_datetime = datetime.now()
+# formatted_time = current_datetime.strftime("%I:%M %p")
+# print("Current time:", formatted_time)
+
+
+# Write a program that takes a user-entered date in the format "MM/DD/YYYY" and prints it in the format "YYYY-MM-DD".
+
+# date_str = input("Enter a date (MM/DD/YYYY): ")
+# date_obj = datetime.strptime(date_str, "%m/%d/%Y")
+# formatted_date = date_obj.strftime("%Y-%m-%d")
+
+# print("Formatted date:", formatted_date)
+
+
+# Create a function that takes a datetime object as input and displays the day of the week (e.g., "Monday") using strftime().
+
+# datetime_str = input("Enter a datetime (YYYY-MM-DD): ")
+# datetime_obj = datetime.strptime(datetime_str, "%Y-%m-%d")
+# day_of_week = datetime_obj.strftime("%A")
+# print("Day of the week:", day_of_week)
+
+
+# Create a function that takes a timezone name as input and prints the current date time object in that timezone.
+
+# timezone_name = input("Enter a timezone (e.g., 'Asia/Kolkata', 'America/New_York'): ")
+
+# def print_current_datetime_in_timezone(timezone_name):
+
+#     utc_now = datetime.now(pytz.utc)
+#     timezone = pytz.timezone(timezone_name)
+#     local_time = utc_now.astimezone(timezone)
+#     print("Current datetime in", timezone_name, "is:", local_time)
+
+# print_current_datetime_in_timezone(timezone_name)
+
+
+# Write a program that converts a given date time (tz aware) string from one timezone to another.
+
+# datetime_str = input("Enter the datetime (e.g., '2023-08-26 15:30:00'): ")
+# from_timezone = input("Enter the source timezone (e.g., 'Asia/Kolkata'): ")
+# to_timezone = input("Enter the target timezone (e.g., 'America/New_York'): ")
+
+# datetime_obj = datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S")
+
+# source_tz = pytz.timezone(from_timezone)
+# localized_datetime = source_tz.localize(datetime_obj)
+
+# target_tz = pytz.timezone(to_timezone)
+# converted_datetime = localized_datetime.astimezone(target_tz)
+
+# print("Converted datetime in", to_timezone, "is:", converted_datetime)
+
+
+# Write a program that takes a datetime object (naive) and a timezone name as input, and returns a localized datetime object in the specified timezone.
+
+# datetime_str = input("Enter the naive datetime (e.g., '2023-08-26 15:30:00'): ")
+# timezone_name = input("Enter the timezone (e.g., 'Asia/Kolkata'): ")
+
+# naive_datetime = datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S")
+# timezone = pytz.timezone(timezone_name)
+
+# localized_datetime = timezone.localize(naive_datetime)
+
+# print("Localized datetime in", timezone_name, "is:", localized_datetime)
+
+
+# Create a function that takes a timezone name and a number of hours as input, and prints the current time plus the specified hours in that timezone
+
+# timezone_name = input("Enter a timezone (e.g., 'Asia/Kolkata'): ")
+# hours = int(input("Enter the number of hours to add: "))
+
+# def print_future_time_in_timezone(timezone_name, hours):
+#     utc_now = datetime.now(pytz.utc)
+
+#     timezone = pytz.timezone(timezone_name)
+#     local_time = utc_now.astimezone(timezone)
+
+#     future_time = local_time + timedelta(hours=hours)
+
+#     print(f"Current time plus {hours} hours in {timezone_name} is: {future_time}")
+
+# print_future_time_in_timezone(timezone_name, hours)
+
+
+# Write a program that calculates the date and time of the daylight saving start in the year 2022.
+# take timezone "US/Pacific"
+# take string date as "2022-01-01 00:00:00"
+# hint: use
+# bool(tz_aware_dt.dst()) == True # dst activated
+# bool(tz_aware_dt.dst()) == False # dst not activated
+
+# timezone = pytz.timezone("US/Pacific")
+
+# start_date_str = "2022-01-01 00:00:00"
+# start_date = datetime.strptime(start_date_str, "%Y-%m-%d %H:%M:%S")
+
+# start_date = timezone.localize(start_date)
+
+# def find_dst_start(year):
+#     date = datetime(year, 1, 1, 0, 0, 0, tzinfo=timezone)
+#     while date.year == year:
+#         if bool(date.dst()) == True:
+#             return date
+#         date += timedelta(days=1)
+#         date = timezone.localize(date)
+#     return None
+
+# dst_start = find_dst_start(2022)
+
+# if dst_start:
+#     print(f"Daylight Saving Time starts on: {dst_start.strftime('%Y-%m-%d %H:%M:%S %Z%z')}")
+# else:
+#     print("Daylight Saving Time does not start in 2022.")
+
+
+# Write a program that calculates the date and time of the daylight saving end in the year 2022.
+# take timezone "US/Pacific"
+# take string date as "2022-01-01 00:00:00"
+# hint: use
+# bool(tz_aware_dt.dst()) == True # dst activated
+# bool(tz_aware_dt.dst()) == False # dst not activated
+
+# timezone = pytz.timezone("US/Pacific")
+
+# start_date_str = "2022-01-01 00:00:00"
+# start_date = datetime.strptime(start_date_str, "%Y-%m-%d %H:%M:%S")
+
+# start_date = timezone.localize(start_date)
+
+# def find_dst_end(year):
+#     date = datetime(year, 1, 1, 0, 0, 0, tzinfo=timezone)
+#     date = timezone.localize(date)
+#     in_dst = bool(date.dst())
+
+#     while date.year == year:
+#         date += timedelta(days=1)
+#         date = timezone.localize(date)
+#         if bool(date.dst()) != in_dst:
+#             if not in_dst:
+#                 return date
+#             in_dst = not in_dst
+#     return None
+
+# dst_end = find_dst_end(2022)
+
+# if dst_end:
+#     print(f"Daylight Saving Time ends on: {dst_end.strftime('%Y-%m-%d %H:%M:%S %Z%z')}")
+# else:
+#     print("Daylight Saving Time does not end in 2022.")
+
+
+# Design a program that helps schedule a meeting across different timezones. The program should take the meeting time in one timezone and display the corresponding times in other timezones.
+# consider three countries: UK, US, Saudi Arab and Pakistan
+# consider the meeting time is: 30 August 2023 at 2 PM Pakistan time
+
+# timezones = {
+#     'Pakistan': 'Asia/Karachi',
+#     'UK': 'Europe/London',
+#     'US (New York)': 'America/New_York',
+#     'Saudi Arabia': 'Asia/Riyadh'
+# }
+
+# meeting_time_str = "2023-08-30 14:00:00"
+# pakistan_tz = pytz.timezone(timezones['Pakistan'])
+# meeting_time = datetime.strptime(meeting_time_str, "%Y-%m-%d %H:%M:%S")
+
+# meeting_time_pakistan = pakistan_tz.localize(meeting_time)
+
+# for country, tz_name in timezones.items():
+#     tz = pytz.timezone(tz_name)
+#     meeting_time_in_timezone = meeting_time_pakistan.astimezone(tz)
+#     print(f"Meeting time in {country}: {meeting_time_in_timezone.strftime('%Y-%m-%d %H:%M:%S %Z%z')}")
+
+
+# Booking System
+# Design a booking system where users specify a start datetime, end datetime, and timezone. Implement a function that checks whether a specified time slot is available.
+# if timeslot is available then store the start_date and end_date in the list of objects i.e
+"""
+booking_storage = [
+  {
+    "start_date": "",
+    "end_date": ""
+  }
+]
+"""
+# hint 1: store dates in booking_storage in UTC format i.e pytz.utc
+# hint 2: use for loop, the loop should run 5 times. ask user input inside the loop
+
+# instruction to test your program:
+# first iteration of loop
+# give input "2023-08-26 18:00:00" as start_date and "2023-08-26 19:00:00" as end_date and "Asia/Karachi" as timezone
+
+# second iteration of loop
+# give input "2023-08-26 16:00:00" as start_date and "2023-08-26 17:00:00" as end_date and "Asia/Riyadh" as timezone
+# above program should not accept this booking as the slot is already booked by the first iteration
+
+booking_storage = []
+
+
+def is_slot_available(start_date, end_date):
+    start_date_utc = start_date.astimezone(pytz.utc)
+    end_date_utc = end_date.astimezone(pytz.utc)
+
+    for booking in booking_storage:
+        booked_start = booking["start_date"]
+        booked_end = booking["end_date"]
+
+        if (start_date_utc < booked_end) and (end_date_utc > booked_start):
+            return False
+    return True
+
+
+def add_booking(start_date, end_date):
+    if is_slot_available(start_date, end_date):
+        booking_storage.append({
+            "start_date": start_date.astimezone(pytz.utc).strftime('%Y-%m-%d %H:%M:%S %Z%z'),
+            "end_date": end_date.astimezone(pytz.utc).strftime('%Y-%m-%d %H:%M:%S %Z%z')
+        })
+        print("Booking confirmed!")
+    else:
+        print("Time slot is not available.")
+
+
+for _ in range(5):
+    start_date_str = input("Enter start date (YYYY-MM-DD HH:MM:SS): ")
+    end_date_str = input("Enter end date (YYYY-MM-DD HH:MM:SS): ")
+    timezone_str = input("Enter timezone (e.g., Asia/Karachi): ")
+
+    timezone = pytz.timezone(timezone_str)
+    start_date = datetime.strptime(start_date_str, "%Y-%m-%d %H:%M:%S")
+    end_date = datetime.strptime(end_date_str, "%Y-%m-%d %H:%M:%S")
+
+    start_date = timezone.localize(start_date)
+    end_date = timezone.localize(end_date)
+
+    add_booking(start_date, end_date)
+
+print("Booking storage:")
+for booking in booking_storage:
+    print(booking)
